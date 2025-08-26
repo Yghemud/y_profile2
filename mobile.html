@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Responsive Animated Dashboard</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Animate.css -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom Styles & Icons -->
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet"
+  />
+</head>
+
+<body class="animate__animated animate__fadeIn">
+
+  <!-- Mobile Navbar & Offcanvas Toggle -->
+  <nav
+    class="navbar navbar-dark bg-dark d-md-none animate__animated animate__fadeInDown"
+  >
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#mobileNav"
+        aria-controls="mobileNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand text-white" href="#">Dashboard</a>
+    </div>
+  </nav>
+
+  <!-- Offcanvas Sidebar for Mobile -->
+  <div
+    class="offcanvas offcanvas-start bg-dark text-white"
+    tabindex="-1"
+    id="mobileNav"
+    aria-labelledby="mobileNavLabel"
+  >
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="mobileNavLabel">Menu</h5>
+      <button
+        type="button"
+        class="btn-close btn-close-white"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="offcanvas-body animate__animated animate__fadeInLeft">
+      <div class="profile text-center mb-4">
+        <img
+          src="man.jpg"
+          class="img-fluid rounded-circle mb-2"
+          alt="Profile Picture"
+        />
+        <p class="fw-bold">USER</p>
+      </div>
+      <nav class="nav flex-column">
+        <a class="nav-link text-white" href="#top">Dashboard</a>
+        <a class="nav-link text-white" href="#data">Data</a>
+        <a class="nav-link text-white" href="#user">User</a>
+        <a class="nav-link text-white" href="#schedule">Schedules</a>
+        <a class="nav-link text-white" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <!-- Sidebar (md and up) -->
+      <aside
+        class="col-12 col-md-3 bg-dark text-white vh-100 p-4 d-none d-md-block animate__animated animate__slideInLeft"
+      >
+        <div class="profile text-center mb-4">
+          <img
+            src="man.jpg"
+            class="img-fluid rounded-circle mb-2"
+            alt="Profile Picture"
+          />
+          <p class="fw-bold">USER</p>
+        </div>
+        <nav class="nav flex-column">
+          <a
+            class="nav-link text-white d-flex align-items-center mb-2"
+            href="#top"
+          >
+            <i class="material-symbols-outlined me-2">dashboard</i>
+            Dashboard
+          </a>
+          <a
+            class="nav-link text-white d-flex align-items-center mb-2"
+            href="#data"
+          >
+            <i class="material-symbols-outlined me-2">database</i>
+            Data
+          </a>
+          <a
+            class="nav-link text-white d-flex align-items-center mb-2"
+            href="#user"
+          >
+            <i class="material-symbols-outlined me-2">person</i>
+            User
+          </a>
+          <a
+            class="nav-link text-white d-flex align-items-center mb-2"
+            href="#schedule"
+          >
+            <i class="material-symbols-outlined me-2">schedule</i>
+            Schedules
+          </a>
+          <a
+            class="nav-link text-white d-flex align-items-center"
+            href="#contact"
+          >
+            <i class="material-symbols-outlined me-2">3p</i>
+            Contact
+          </a>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main
+        class="col-12 col-md-9 p-4 animate__animated animate__slideInRight"
+      >
+
+        <!-- Header -->
+        <header
+          class="d-flex justify-content-between align-items-center mb-5 animate__animated animate__fadeInDown"
+        >
+          <h1 class="h3 text-dark" id="dtitle">Dashboard</h1>
+          <div class="d-flex align-items-center">
+            <span
+              class="material-symbols-outlined me-3 text-dark"
+              id="noti"
+            >notifications</span>
+            <span class="material-symbols-outlined me-3 text-dark">settings</span>
+            <span class="material-symbols-outlined me-3 text-dark">search</span>
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              placeholder="Search..."
+            />
+          </div>
+        </header>
+
+        <!-- Activities -->
+        <section
+          id="activities"
+          class="mb-5 animate__animated animate__fadeInUp"
+        >
+          <div class="mb-3">
+            <h2 class="h5">Activities</h2>
+            <p class="text-muted">May–June 2024</p>
+          </div>
+          <img
+            src="BarGraph.png"
+            class="img-fluid rounded animate__animated animate__zoomIn"
+            alt="text overview"
+          />
+        </section>
+
+        <!-- Dashboard Data Cards -->
+        <section id="data" class="mb-5 animate__animated animate__fadeInUp">
+          <h2 class="h5 mb-4">Dashboard Data</h2>
+          <div class="row g-3">
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="card text-center shadow-sm p-3 animate__animated animate__fadeIn">
+                <i class="material-symbols-outlined display-6">
+                  attach_money
+                </i>
+                <p class="mt-2 mb-1">Total revenue:</p>
+                <p class="h6">$2,129,430</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="card text-center shadow-sm p-3 animate__animated animate__fadeIn">
+                <i class="material-symbols-outlined display-6">
+                  account_balance_wallet
+                </i>
+                <p class="mt-2 mb-1">Total Transactions:</p>
+                <p class="h6">1,450</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="card text-center shadow-sm p-3 animate__animated animate__fadeIn">
+                <i class="material-symbols-outlined display-6">
+                  favorite
+                </i>
+                <p class="mt-2 mb-1">Total Likes:</p>
+                <p class="h6">1,234</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="card text-center shadow-sm p-3 animate__animated animate__fadeIn">
+                <i class="material-symbols-outlined display-6">
+                  person
+                </i>
+                <p class="mt-2 mb-1">Total Users:</p>
+                <p class="h6">856</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- User Interactions Table -->
+        <section id="user" class="mb-5 animate__animated animate__fadeInUp">
+          <h2 class="h5 mb-3">User Interactions</h2>
+          <div class="table-responsive animate__animated animate__fadeIn">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Month</th>
+                  <th>Number Of Users</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>January</td>
+                  <td>120</td>
+                </tr>
+                <tr>
+                  <td>February</td>
+                  <td>135</td>
+                </tr>
+                <tr>
+                  <td>March</td>
+                  <td>150</td>
+                </tr>
+                <tr>
+                  <td>April</td>
+                  <td>160</td>
+                </tr>
+                <tr>
+                  <td>May</td>
+                  <td>170</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Today's Schedules -->
+        <section
+          id="schedule"
+          class="mb-5 animate__animated animate__fadeInUp"
+        >
+          <h2 class="h5 mb-4">Today's Schedules</h2>
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <div class="card p-3 shadow-sm animate__animated animate__fadeIn">
+                <p class="fw-medium mb-1">
+                  Meeting with suppliers from Kuta Bali
+                </p>
+                <p class="text-muted mb-1">14.00–15.00</p>
+                <p class="text-secondary">
+                  at Sunset Road, Kuta, Bali
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="card p-3 shadow-sm animate__animated animate__fadeIn">
+                <p class="fw-medium mb-1">
+                  Check operation at Giga Factory 1
+                </p>
+                <p class="text-muted mb-1">18.00–20.00</p>
+                <p class="text-secondary">at Central Jakarta</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="card p-3 shadow-sm animate__animated animate__fadeIn">
+                <p class="fw-medium mb-1">Team standup sync</p>
+                <p class="text-muted mb-1">09.00–09.30</p>
+                <p class="text-secondary">Video conference</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="card p-3 shadow-sm animate__animated animate__fadeIn">
+                <p class="fw-medium mb-1">Design review meeting</p>
+                <p class="text-muted mb-1">11.00–12.00</p>
+                <p class="text-secondary">Main office</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact & Feedback -->
+        <section id="contact" class="mb-5 animate__animated animate__fadeInUp">
+          <div class="row g-4">
+            <div class="col-12 col-lg-6">
+              <h2 class="h5 mb-3">Contact Details</h2>
+              <div class="ratio ratio-1x1 animate__animated animate__zoomIn">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1558.0114269924134!2d74.78980812499873!3d19.091409351494836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1skrishna%20coaching%20classes%20%2C%20ahmadnagar!5e0!3m2!1sen!2sin!4v1755949977760!5m2!1sen!2sin"
+                  style="border:0;"
+                  allowfullscreen
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <h2 class="h5 mb-3">Feedback</h2>
+              <form
+                action="https://www.instagram.com/direct/t/17848430885960541/"
+                method="post"
+                class="d-grid gap-3 animate__animated animate__fadeIn"
+              >
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  placeholder="Your Name"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="Your Email"
+                  required
+                />
+                <button type="submit" class="btn btn-primary">
+                  Submit Form
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer
+          class="d-flex justify-content-between align-items-center py-3 border-top animate__animated animate__fadeInUp"
+        >
+          <div>
+            <a
+              class="me-3 text-decoration-none text-dark"
+              href="https://www.facebook.com/profile.php?id=100077359354542"
+            >
+              <i class="fab fa-facebook-f me-1"></i>Facebook
+            </a>
+            <a
+              class="me-3 text-decoration-none text-dark"
+              href="https://www.twitter.com"
+            >
+              <i class="fab fa-twitter me-1"></i>Twitter
+            </a>
+            <a
+              class="text-decoration-none text-dark"
+              href="https://www.instagram.com/ghemudyashraj/"
+            >
+              <i class="fab fa-instagram me-1"></i>Instagram
+            </a>
+          </div>
+          <div class="text-muted">
+            &copy; 2025 Y-GHEMUD PRESENT&rsquo;S. All Rights Reserved.
+          </div>
+        </footer>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    defer
+  ></script>
+</body>
+
+</html>
